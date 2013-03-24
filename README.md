@@ -16,7 +16,7 @@ and using Alex Bain's lirc details at:
 http://alexba.in/blog/2013/02/23/controlling-lirc-from-the-web/
 
 Developments
-============
+------------
 
 The developments include:
  - New web remote layout (with bigger buttons) - see below,
@@ -25,11 +25,11 @@ The developments include:
  - Daemon script added.
 
 Daemon for autorunning on boot
-==============================
+------------------------------
 
-Add the following line to /etc/rc.local
+Add the following line to `/etc/rc.local`
 
-/home/pi/web-irsend/daemon &
+`/home/pi/web-irsend/daemon &`
 
 (replace path with the full path to the daemon script).
 
