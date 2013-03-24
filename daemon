@@ -1,0 +1,7 @@
+#!/bin/bash
+
+until [ ]; do
+	python /home/pi/web-irsend/remote.py 2>/dev/null
+	sleep 5
+done
+

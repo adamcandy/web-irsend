@@ -1,85 +1,73 @@
 {% extends "base.html" %}
 {% block body %}
-<div data-role="page" data-title="Control" id="control" data-add-back-btn="true">
-	<div data-role="header" data-theme="b">
-		<h1>Pi Remote Control</h1>
-		<h4>{{d.id}}</h4>
-	</div>
+<div data-role="page" data-title="Control" id="control" data-add-back-btn="true" style='margin:0; padding:0;'>
+<div data-role="content" style='margin:0; padding:0;'>
+<div id="remote" style='margin:0; padding:0;'>
+<svg width="100%">
+<svg viewBox="0 0 400 600">
 
-    <div data-role="content">
-        
-        <div id ="remote">
-            <svg width="100%">
-            	<svg viewBox="0 0 400 600">
-					<!-- Backgrounds -->
-					<g opacity=".5" >
-					  <path d="M 0 200 A 200 200 0 1 1 400 200" fill="black" />
-					<rect x="00" y="200" width="400" height="400" fill="black" />
-					</g>					
+<g onclick="clickedOp('{{ d.id }}','KEY_1');">
+<path fill="#CDCCCC" d="M76,263.5c0,8.2-6.8,15-15,15H19c-8.2,0-15-6.8-15-15v-42c0-8.2,6.8-15,15-15h42c8.2,0,15,6.8,15,15V263.5z"/>
+<text transform="matrix(1.5415 0 0 1 15.0781 263.2354)" fill="#FFFFFF" font-family="sans-serif" font-size="63.2182">1</text>
+</g>
 
-					
-					<!-- Arrows -->					
-					<g opacity="1" >
-					  <path d="M 150,130 200,100 250,130 z" fill="white" stroke="gray" onclick="clickedOp('{{ d.id }}','KEY_UP');"/>
-					  <path d="M 150,270 200,300 250,270 z" fill="white" stroke="gray" onclick="clickedOp('{{ d.id }}','KEY_DOWN');"/>
-					  
-					  <text x="185" y="205" font-size="20" fill="white" onclick="clickedOp('{{ d.id }}','KEY_OK');" id="key_ok">OK</text>
-					  <path d="M 130,150 100,200 130,250 z" fill="white" stroke="gray" onclick="clickedOp('{{ d.id }}','KEY_LEFT');"/>
-					  <path d="M 270,150 300,200 270,250 z" fill="white" stroke="gray" onclick="clickedOp('{{ d.id }}','KEY_RIGHT');"/>
-					</g>
-	
-					<!-- Controls-->
-					<circle cx="300" cy="88" r="30" fill="#990033" onclick="clickedOp('{{ d.id }}','KEY_CONNECT');" id="key_connect" />
-					  <text x="286" y="92" font-size="20" fill="white" onclick="clickedOp('{{ d.id }}','KEY_CONNECT');">ext</text>
-					<circle cx="200" cy="50" r="30" fill="#990033" onclick="clickedOp('{{ d.id }}','KEY_MENU');" id="key_menu" />
-					  <text x="180" y="55" font-size="18" fill="white" onclick="clickedOp('{{ d.id }}','KEY_MENU');">menu</text>
-					<circle cx="100" cy="88" r="30" fill="#990033" onclick="clickedOp('{{ d.id }}','KEY_INFO');" id="key_info" />
-					  <text x="86" y="92" font-size="18" fill="white" onclick="clickedOp('{{ d.id }}','KEY_INFO');">info</text>
-					<circle cx="56" cy="170" r="30" fill="#990033" onclick="clickedOp('{{ d.id }}','KEY_INFO');" id="key_info" />
-					  <text x="42" y="176" font-size="18" fill="white" onclick="clickedOp('{{ d.id }}','KEY_I');">sub</text>
-					<circle cx="346" cy="170" r="30" fill="#990033" onclick="clickedOp('{{ d.id }}','KEY_INFO');" id="key_info" />
-					  <text x="334" y="176" font-size="18" fill="white" onclick="clickedOp('{{ d.id }}','KEY_POWER');">pwr</text>
+<g onclick="clickedOp('{{ d.id }}','KEY_2');">
+<path fill="#CDCCCC" d="M156,263.5c0,8.2-6.8,15-15,15H99c-8.2,0-15-6.8-15-15v-42c0-8.2,6.8-15,15-15h42c8.2,0,15,6.8,15,15V263.5z"/>
+<text transform="matrix(1.5415 0 0 1 95.0781 263.2354)" fill="#FFFFFF" font-family="sans-serif" font-size="63.2182">2</text>
+</g>
+
+<g onclick="clickedOp('{{ d.id }}','KEY_3');">
+<path fill="#CDCCCC" d="M236,263.5c0,8.2-6.8,15-15,15h-42c-8.2,0-15-6.8-15-15v-42c0-8.2,6.8-15,15-15h42c8.2,0,15,6.8,15,15V263.5z"/>
+<text transform="matrix(1.5415 0 0 1 175.0781 263.2354)" fill="#FFFFFF" font-family="sans-serif" font-size="63.2182">3</text>
+</g>
+
+<g onclick="clickedOp('{{ d.id }}','KEY_4');">
+<path fill="#CDCCCC" d="M316,263.5c0,8.2-6.8,15-15,15h-42c-8.2,0-15-6.8-15-15v-42c0-8.2,6.8-15,15-15h42c8.2,0,15,6.8,15,15V263.5z"/>
+<text transform="matrix(1.5415 0 0 1 255.0781 263.2354)" fill="#FFFFFF" font-family="sans-serif" font-size="63.2182">4</text>
+</g>
+
+<g onclick="clickedOp('{{ d.id }}','KEY_5');">
+<path fill="#CDCCCC" d="M396,263.5c0,8.2-6.8,15-15,15h-42c-8.2,0-15-6.8-15-15v-42c0-8.2,6.8-15,15-15h42c8.2,0,15,6.8,15,15V263.5z"/>
+<text transform="matrix(1.5415 0 0 1 335.0781 263.2354)" fill="#FFFFFF" font-family="sans-serif" font-size="63.2182">5</text>
+</g>
+
+<g onclick="clickedOp('{{ d.id }}','KEY_6');">
+<path fill="#CDCCCC" d="M76,343.5c0,8.2-6.8,15-15,15H19c-8.2,0-15-6.8-15-15v-42c0-8.2,6.8-15,15-15h42c8.2,0,15,6.8,15,15V343.5z"/>
+<text transform="matrix(1.5415 0 0 1 15.0781 344.2354)" fill="#FFFFFF" font-family="sans-serif" font-size="63.2182">6</text>
+</g>
+
+<g onclick="clickedOp('{{ d.id }}','KEY_7');">
+<path fill="#CDCCCC" d="M156,343.5c0,8.2-6.8,15-15,15H99c-8.2,0-15-6.8-15-15v-42c0-8.2,6.8-15,15-15h42c8.2,0,15,6.8,15,15V343.5z"/>
+<text transform="matrix(1.5415 0 0 1 95.0781 344.2354)" fill="#FFFFFF" font-family="sans-serif" font-size="63.2182">7</text>
+</g>
+
+<g onclick="clickedOp('{{ d.id }}','KEY_8');">
+<path fill="#CDCCCC" d="M236,343.5c0,8.2-6.8,15-15,15h-42c-8.2,0-15-6.8-15-15v-42c0-8.2,6.8-15,15-15h42c8.2,0,15,6.8,15,15V343.5z"/>
+<text transform="matrix(1.5415 0 0 1 175.0781 344.2354)" fill="#FFFFFF" font-family="sans-serif" font-size="63.2182">8</text>
+</g>
+
+<g onclick="clickedOp('{{ d.id }}','KEY_9');">
+<path fill="#CDCCCC" d="M316,343.5c0,8.2-6.8,15-15,15h-42c-8.2,0-15-6.8-15-15v-42c0-8.2,6.8-15,15-15h42c8.2,0,15,6.8,15,15V343.5z"/>
+<text transform="matrix(1.5415 0 0 1 255.0781 344.2354)" fill="#FFFFFF" font-family="sans-serif" font-size="63.2182">9</text>
+</g>
+
+<g onclick="clickedOp('{{ d.id }}','KEY_0');">
+<path fill="#CDCCCC" d="M396,343.5c0,8.2-6.8,15-15,15h-42c-8.2,0-15-6.8-15-15v-42c0-8.2,6.8-15,15-15h42c8.2,0,15,6.8,15,15V343.5z"/>
+<text transform="matrix(1.5415 0 0 1 335.0781 344.2354)" fill="#FFFFFF" font-family="sans-serif" font-size="63.2182">0</text>
+</g>
+
+<polygon onclick="clickedOp('{{ d.id }}', 'KEY_AUX KEY_UP KEY_UP KEY_DOWN KEY_OK KEY_OK KEY_OK');" fill="#F3E600" points="345.2,12.1 340.9,78.3 392.9,119.4 328.7,135.7 305.7,198 270.3,141.9 204,139.2 246.4,88.2 228.4,24.4 290,48.9 "/>
+<path onclick="clickedOp('{{ d.id }}','KEY_POWER');" fill="#56B038" d="M195,155c0,22-18,40-40,40H45c-22,0-40-18-40-40V45C5,23,23,5,45,5h110c22,0,40,18,40,40V155z"/>
+<path onclick="clickedOp('{{ d.id }}','KEY_CHANNELUP');" fill="#0180C1" d="M225,468.5c-11,0-16.3-8.2-11.8-18.3c0,0,34.4-76.7,86.8-76.7s86.8,76.7,86.8,76.7c4.5,10-0.8,18.3-11.8,18.3H225z"/>
+<path onclick="clickedOp('{{ d.id }}','KEY_CHANNELDOWN');" fill="#0180C1" d="M225,474.5c-11,0-16.3,8.2-11.8,18.3c0,0,34.4,76.7,86.8,76.7s86.8-76.7,86.8-76.7c4.5-10-0.8-18.3-11.8-18.3H225z"/>
+<path onclick="clickedOp('{{ d.id }}','KEY_VOLUMEUP');" fill="#E6223C" d="M25,468.5c-11,0-13.6-6.4-5.9-14.1l66.7-66.7c7.8-7.8,20.5-7.8,28.3,0l66.7,66.7c7.8,7.8,5.1,14.1-5.9,14.1H25z"/>
+<path onclick="clickedOp('{{ d.id }}','KEY_VOLUMEDOWN');" fill="#E6223C" d="M25,474.5c-11,0-13.6,6.4-5.9,14.1l66.7,66.7c7.8,7.8,20.5,7.8,28.3,0l66.7-66.7c7.8-7.8,5.1-14.1-5.9-14.1H25z"/>
+<circle onclick="clickedOp('{{ d.id }}','KEY_MUTE');" fill="#8767AA" cx="189" cy="599" r="55"/>
 
 
-					<!-- Colour Buttons -->
-					<circle cx="65"  cy="350" r="20" fill="red" onclick="clickedOp('{{ d.id }}','KEY_RED');" id="key_red" />
-					<circle cx="155" cy="350" r="20" fill="green" onclick="clickedOp('{{ d.id }}','KEY_GREEN');" id="key_green" />
-					<circle cx="245" cy="350" r="20" fill="yellow" onclick="clickedOp('{{ d.id }}','KEY_YELLOW');" id="key_yellow" />
-					<circle cx="335" cy="350" r="20" fill="blue" onclick="clickedOp('{{ d.id }}','KEY_BLUE');" id="key_blue" />
-					
 
 
-
-					<!-- Channel-->
-					<circle cx="100" cy="460" r="30" fill="#990033" onclick="clickedOp('{{ d.id }}','KEY_CHANNELUP');" id="key_channelup" />
-					  <text x="91" y="467" font-size="20" fill="white" onclick="clickedOp('{{ d.id }}','KEY_CHANNELUP');">P+</text>
-					<circle cx="100" cy="540" r="30" fill="#990033" onclick="clickedOp('{{ d.id }}','KEY_CHANNELDOWN');" id="key_channeldown" />
-					  <text x="92" y="547" font-size="20" fill="white" onclick="clickedOp('{{ d.id }}','KEY_CHANNELDOWN');">P-</text>
-
-					<!-- Channel Arrows -->
-					<path d="M 140,470 160,450 180,470 z" fill="white" stroke="gray" onclick="clickedOp('{{ d.id }}','KEY_UP');"/>
-					<path d="M 140,530 160,550 180,530 z" fill="white" stroke="gray" onclick="clickedOp('{{ d.id }}','KEY_UP');"/>
-					
-
-					<!-- Volume-->
-					<circle cx="300" cy="460" r="30" fill="#990033" onclick="clickedOp('{{ d.id }}','KEY_VOLUMEUP');" id="key_volumeup" />
-					  <text x="291" y="467" font-size="20" fill="white" onclick="clickedOp('{{ d.id }}','KEY_VOLUMEUP');">V+</text>
-					<circle cx="300" cy="540" r="30" fill="#990033" onclick="clickedOp('{{ d.id }}','KEY_VOLUMEDOWN');" id="key_volumedown" />
-					  <text x="292" y="547" font-size="20" fill="white" onclick="clickedOp('{{ d.id }}','KEY_VOLUMEDOWN');">V-</text>
-					
-					<!-- Volume Bars -->
-					<rect x="200" y="450" height="10" width="60" fill="white" />
-					<rect x="200" y="470" height="10" width="50" fill="white" />
-				    <rect x="200" y="490" height="10" width="40" fill="white" />
-				    <rect x="200" y="510" height="10" width="30" fill="white" />
-              		<rect x="200" y="530" height="10" width="20" fill="white" />
-              		<rect x="200" y="550" height="10" width="10" fill="white" />
-            	</svg>
-            
-            </svg>
-        </div>
-    </div>
-</div>        
+</svg></svg></div></div></div>        
 {% endblock %}
 
 
