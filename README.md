@@ -13,5 +13,25 @@ and using Alex Bain's lirc details at:
 
 http://alexba.in/blog/2013/02/23/controlling-lirc-from-the-web/
 
-The developments include a new web remote layout (with bigger buttons):
+Developments
+============
+
+The developments include:
+ - New web remote layout (with bigger buttons) - see below.
+ - Enable multiple lirc commands to be sent with one button press
+ - Cleaned up links to enable proxying through an Apache server
+ - Daemon script added
+
+Daemon for autorunning on boot
+==============================
+
+Add the following line to /etc/rc.local
+
+/home/pi/web-irsend/daemon &
+
+(replace path with the full path to the daemon script).
+
+New remote layout
+=================
+
 ![Remote layout](./static/remote_layout.png?raw=true "Remote layout")
