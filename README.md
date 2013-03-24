@@ -19,10 +19,10 @@ Developments
 ============
 
 The developments include:
- - New web remote layout (with bigger buttons) - see below.
- - Enable multiple lirc commands to be sent with one button press
- - Cleaned up links to enable proxying through an Apache server
- - Daemon script added
+ - New web remote layout (with bigger buttons) - see below,
+ - Enable multiple lirc commands to be sent with one button press,
+ - Cleaned up links to enable proxying through an Apache server,
+ - Daemon script added.
 
 Daemon for autorunning on boot
 ==============================
