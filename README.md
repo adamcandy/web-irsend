@@ -3,6 +3,8 @@ web-irsend
 
 Web-based IR Remote on the Raspberry Pi, a modification of the branch developed by slimjim777 at:
 
+http://github.com/slimjim777/web-irsend
+
 git://github.com/slimjim777/web-irsend.git
 
 with information at:
