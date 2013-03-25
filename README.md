@@ -33,7 +33,12 @@ Add the following line to `/etc/rc.local`
 
 (replace path with the full path to the daemon script).
 
+TODO
+----
+ - Clean up superfluous stylesheets and layouts,
+ - Add swipe support through jQuery mobile?
+
 New remote layout
-=================
+-----------------
 
 ![Remote layout](./static/remote_layout.png?raw=true "Remote layout")
