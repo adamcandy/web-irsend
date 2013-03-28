@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block body %}
+<div data-role="page" data-title="Control" id="control" data-add-back-btn="true" style='margin:0; padding:0;'>
+<div data-role="content" style='margin:0; padding:0;'>
+<div id="remote" style='margin:0; padding:0;'>
+<svg width="100%">
+<svg viewBox="0 0 400 600">
+
+<g onclick="clickedOp('{{ d.id }}','play');">
+	<circle fill="#8767AA" cx="298" cy="520" r="90"/>
+	<polygon fill="#FFFFFF" points="328,520 278,545 278,495 	"/>
+</g>
+<g onclick="clickedOp('{{ d.id }}','menu');">
+	<circle fill="#8767AA" cx="102" cy="520" r="90"/>
+	<text transform="matrix(1.2299 0 0 1 43.7637 530.6865)" fill="#FFFFFF" font-family="sans-serif" font-size="36.4086">MENU</text>
+</g>
+<circle onclick="clickedOp('{{ d.id }}','ok');" fill="#CDCCCC" cx="200" cy="200" r="90"/>
+
+<path onclick="clickedOp('{{ d.id }}','right');" fill="#0180C1" d="M334.351,65.65l-70.711,70.71c35.147,35.147,35.148,92.131,0,127.279l70.711,70.711
+	C408.55,260.151,408.55,139.85,334.351,65.65z"/>
+<path onclick="clickedOp('{{ d.id }}','down');" fill="#F3E600" d="M65.649,334.351l70.711-70.711c35.147,35.147,92.131,35.148,127.279,0l70.711,70.711
+	C260.15,408.551,139.85,408.551,65.649,334.351z"/>
+<path onclick="clickedOp('{{ d.id }}','up');" fill="#E6223C" d="M334.351,65.65l-70.711,70.71c-35.147-35.147-92.131-35.148-127.279,0L65.649,65.65
+	C139.85-8.55,260.15-8.55,334.351,65.65z"/>
+<path onclick="clickedOp('{{ d.id }}','left');" fill="#56B038" d="M65.649,334.351l70.711-70.711c-35.147-35.147-35.148-92.131,0-127.279L65.649,65.65
+	C-8.55,139.85-8.55,260.151,65.649,334.351z"/>
+
+</svg></svg></div></div></div>        
+{% endblock %}
+
+
