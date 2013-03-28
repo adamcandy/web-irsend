@@ -31,7 +31,10 @@ def index(device=None):
 @app.route("/device/<device_id>")
 def device(device_id=None):
     d = {'id':device_id}        
-    return render_template('control.html', d=d)
+    if device_id.startswith('apple'):
+        return render_template('control_apple.html', d=d)
+    else:
+        return render_template('control.html', d=d)
 
 
 @app.route("/device/<device_id>/clicked/<op>")
