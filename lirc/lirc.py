@@ -66,7 +66,7 @@ class Lirc:
 		"""
 		Send single call to IR LED.
 		"""
-		call(['irsend', 'SEND_ONCE', device_id, message])
+		call(['irsend', 'SEND_ONCE', device_id ] + message.split(' '))
 
 				
 if __name__ == "__main__":
