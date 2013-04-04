@@ -29,8 +29,10 @@ def index(device=None):
     return render_template('remote.html', devices=devices)
 
 def volumetencolour(option):
-    volumetencolour_off = '#F18518'
-    volumetencolour_on = '#FF0000'
+    #volumetencolour_off = '#F18518'
+    #volumetencolour_on = '#FF0000'
+    volumetencolour_off = '0'
+    volumetencolour_on = '1'
     if option:
 	return volumetencolour_on
     else:
