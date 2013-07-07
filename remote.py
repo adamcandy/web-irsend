@@ -7,6 +7,7 @@ from flask import request, redirect, url_for
 
 BASE_URL = ''
 volumeten = False
+inputsourcecolour = '#F3E600'
 
 app = Flask(__name__)
 
@@ -37,14 +38,14 @@ def volumetencolour(option):
 	return volumetencolour_on
     else:
         return volumetencolour_off
-  
+
 @app.route("/device/<device_id>")
 def device(device_id=None):
     d = {'id':device_id}        
     if device_id.startswith('apple'):
-        return render_template('control_apple.html', d=d, volumetencolour=volumetencolour(volumeten))
+        return render_template('control_apple.html', d=d, volumetencolour=volumetencolour(volumeten), inputsourcecolour=inputsourcecolour)
     else:
-        return render_template('control.html', d=d, volumetencolour=volumetencolour(volumeten))
+        return render_template('control.html', d=d, volumetencolour=volumetencolour(volumeten), inputsourcecolour=inputsourcecolour)
 
 
 @app.route("/device/<device_id>/clicked/<op>")
@@ -66,6 +67,16 @@ def clickedvolumetenoption(device_id=None, op='off'):
         volumeten = False
     return ""
 
+@app.route("/device/<device_id>/clicked/inputsource/<op>")
+def clickedinputsource(device_id=None, op=None):
+    global inputsourcecolour
+    if op == 'tv':
+        inputsourcecolour = '#F3E600'
+        lircParse.send_once(device_id, 'input down down down down down down ok')
+    else:
+        inputsourcecolour = '#000000'
+        lircParse.send_once(device_id, 'input down down down down down down down ok')
+    return ""
 
 
 if __name__ == "__main__":
