@@ -10,3 +10,6 @@ commit: update archive
 	git commit -a
 	git push
 
+restart:
+	sudo /etc/init.d/lirc restart
+
