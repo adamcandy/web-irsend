@@ -42,7 +42,7 @@ def volumetencolour(option):
 @app.route("/device/<device_id>")
 def device(device_id=None):
     d = {'id':device_id}        
-    if device_id.startswith('apple'):
+    if device_id.startswith('ramekin'):
         return render_template('control_apple.html', d=d, volumetencolour=volumetencolour(volumeten), inputsourcecolour=inputsourcecolour)
     else:
         return render_template('control.html', d=d, volumetencolour=volumetencolour(volumeten), inputsourcecolour=inputsourcecolour)
@@ -73,11 +73,11 @@ def clickedinputsource(device_id=None, op=None):
     if op == 'tv':
         inputsourcecolour = '#F3E600'
         #lircParse.send_once(device_id, 'input down down down down down down ok')
-        lircParse.send_once(device_id, 'input down ok')
+        lircParse.send_once(device_id, 'input ok')
     else:
         inputsourcecolour = '#000000'
         #lircParse.send_once(device_id, 'input down down down down down down down ok')
-        lircParse.send_once(device_id, 'input down ok')
+        lircParse.send_once(device_id, 'input ok')
     return ""
 
 
