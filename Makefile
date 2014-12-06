@@ -12,4 +12,5 @@ commit: update archive
 
 restart:
 	sudo /etc/init.d/lirc restart
+	./daemon reset
 

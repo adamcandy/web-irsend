@@ -72,10 +72,12 @@ def clickedinputsource(device_id=None, op=None):
     global inputsourcecolour
     if op == 'tv':
         inputsourcecolour = '#F3E600'
-        lircParse.send_once(device_id, 'input down down down down down down ok')
+        #lircParse.send_once(device_id, 'input down down down down down down ok')
+        lircParse.send_once(device_id, 'input down ok')
     else:
         inputsourcecolour = '#000000'
-        lircParse.send_once(device_id, 'input down down down down down down down ok')
+        #lircParse.send_once(device_id, 'input down down down down down down down ok')
+        lircParse.send_once(device_id, 'input down ok')
     return ""
 
 
