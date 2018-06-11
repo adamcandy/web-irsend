@@ -1,7 +1,42 @@
 #!/bin/bash
 
-until [ ]; do
-	python /home/pi/web-irsend/remote.py 2>/dev/null
-	sleep 5
-done
+daemon()
+{
+	until [ ]; do
+		python /home/pi/web-irsend/remote.py 2>/dev/null
+		sleep 5
+	done
+}
+
+pids()
+{
+	ps auxwww | grep -v grep | grep web-irsend/remote.py | awk '{print $2}'
+}
+
+status()
+{
+	echo "Status:"
+	ps auxwww | grep -v grep | grep web-irsend/remote.py
+}
+
+reset()
+{
+	status
+	echo
+	echo "Reset daemon:"
+	sudo kill $(pids)
+	echo
+	status
+}
+
+
+if [ "$1" == "reset" ]; then
+	reset
+elif [ "$1" == "status" ]; then
+	status
+else
+	daemon
+fi
+
+
 

@@ -5,9 +5,9 @@
 <div id="remote" style='margin:0; padding:0;'>
 <svg width="100%">
 <svg viewBox="0 0 400 600">
-<a href='/device/apple'>
+<g onclick="window.location.href = '/device/ramekin';">
 	<circle fill="#CDCCCC" cx="400" cy="0" r="40"/>
-</a>
+</g>
 
 <g onclick="clickedOp('{{ d.id }}','1');">
 <path fill="#CDCCCC" d="M76,263.5c0,8.2-6.8,15-15,15H19c-8.2,0-15-6.8-15-15v-42c0-8.2,6.8-15,15-15h42c8.2,0,15,6.8,15,15V263.5z"/>
@@ -59,7 +59,8 @@
 <text transform="matrix(1.5415 0 0 1 335.0781 344.2354)" fill="#FFFFFF" font-family="sans-serif" font-size="63.2182">0</text>
 </g>
 
-<polygon onclick="clickedOp('{{ d.id }}', 'input up up down ok ok ok');" fill="#F3E600" points="345.2,12.1 340.9,78.3 392.9,119.4 328.7,135.7 305.7,198 270.3,141.9 204,139.2 246.4,88.2 228.4,24.4 290,48.9 "/>
+<polygon id='inputsource' onclick="clickedinputsource('{{ d.id }}', 'input up up down ok ok ok');" fill="{{ inputsourcecolour }}" points="345.2,12.1 340.9,78.3 392.9,119.4 328.7,135.7 305.7,198 270.3,141.9 204,139.2 246.4,88.2 228.4,24.4 290,48.9 "/>
+
 <path onclick="clickedOp('{{ d.id }}','power power power power power');" fill="#56B038" d="M195,155c0,22-18,40-40,40H45c-22,0-40-18-40-40V45C5,23,23,5,45,5h110c22,0,40,18,40,40V155z"/>
 <path onclick="clickedOp('{{ d.id }}','channelup');" fill="#0180C1" d="M225,468.5c-11,0-16.3-8.2-11.8-18.3c0,0,34.4-76.7,86.8-76.7s86.8,76.7,86.8,76.7c4.5,10-0.8,18.3-11.8,18.3H225z"/>
 <path onclick="clickedOp('{{ d.id }}','channeldown');" fill="#0180C1" d="M225,474.5c-11,0-16.3,8.2-11.8,18.3c0,0,34.4,76.7,86.8,76.7s86.8-76.7,86.8-76.7c4.5-10-0.8-18.3-11.8-18.3H225z"/>
