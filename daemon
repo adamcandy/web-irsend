@@ -8,9 +8,22 @@ daemon()
 	done
 }
 
+daemonlog()
+{
+	until [ ]; do
+		python /home/pi/web-irsend/remote.py >> /home/pi/web-irsend/log 2>&1
+		sleep 5
+	done
+}
+
 pids()
 {
 	ps auxwww | grep -v grep | grep web-irsend/remote.py | awk '{print $2}'
+}
+
+daemonpid()
+{
+	ps auxwww | grep -v grep | grep web-irsend/daemon | awk '{print $2}'
 }
 
 status()
@@ -29,11 +42,20 @@ reset()
 	status
 }
 
+stop()
+{
+	echo $(pids) $(daemonpid)
+	sudo kill $(pids) $(daemonpid)
+	echo $(pids) $(daemonpid)
+}
+
 
 if [ "$1" == "reset" ]; then
 	reset
 elif [ "$1" == "status" ]; then
 	status
+elif [ "$1" == "stop" ]; then
+	stop
 else
 	daemon
 fi
